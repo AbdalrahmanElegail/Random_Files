@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1703041699 source:c:\users\abdal\onedrive\documents\c++\queue broject\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+

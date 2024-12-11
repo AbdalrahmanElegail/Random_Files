@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1702994348 source:c:\users\abdal\onedrive\documents\c++\stack infix translation\main.c
+	<stdio.h>
+	<stdbool.h>
+
