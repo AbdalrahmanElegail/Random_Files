@@ -6,125 +6,167 @@
     <title>story</title>
     <meta name="description" content="children stories">
     <link rel="icon" href="../course_main_topics/images/logo.png">
-    <style>
-        p {
-            color: brown;
-            text-align: center;
-            border: 2px solid blue;
-        }
-
-        div {
-            background-color: beige;
-        }
-
-        #start,
-        #end {
-            color: brown;
-            text-align: center;
-            border: 2px solid blue;
-        }
-    </style>
-    <script>
-    </script>
+    <style> </style>
+    <script> </script>
 </head>
 
 <body>
-    بسم الله الرحمن الرحيم
-    welcome to my page
+    <h2 id="start">start here</h2>
+    <button><a href="#end" title="go to end">go to end</a></button>
     <hr>
     <hr>
-    <section>
-        <h1>Children Stories</h1>
-        <h2>Children Stories</h2>
-        <h3>Children Stories</h3>
-        <h4>Children Stories</h4>
-        <h5>Children Stories</h5>
-        <h6>Children Stories</h6>
-    </section>
+    <!-- <video src="../../../corses/The Complete Web Development Roadmap [2024].mp4" title="this is video" controls
+        width="1500" height="500"></video> -->
     <hr>
     <hr>
-    <p hidden> pla pla pla </p>
-    <p class="one"> this is page </p>
-    <hr>
-    <hr>
-    <video src=""></video>
-    <hr>
-    <hr>
-    <a href="https://google.com" title="go to google"><b>gologolo</b></a>
-    <a href="https://facebook.com" target="_blank" title="go to facebook"><b>facebook</b></a>
-    <a href="../course_main_topics/about.html" target="_blank" title="go to about"><img
-            src="../course_main_topics/images/about.jpg.png" alt="ops.."></a>
-    <a href="#end" title="go to end">end</a>
-    <a href="mailto:abdalrahmanelegail@gmail.com" title="contact abdalrahman">contact me</a>
+    <a href="https://facebook.com" target="_blank" title="go to facebook"><b>facebook</b><br><br></a>
+
+    <a href="../course_main_topics/about.html" target="_blank" title="go to about">
+        <img src="../course_main_topics/images/about.jpg.png" alt="ops.."> <br> <br></a>
+
+    <a href="mailto:abdalrahmanelegail@gmail.com" title="contact abdalrahman">contact me <br> </a>
     <hr>
     <hr>
     <div>
-        <h2 id="start">start here</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2>Children Stories</h2>
-        <h2 id="end">end here</h2>
-        <a href="#start" title="go to start">start</a>
+        <p><b>Students: </b></p>
+        <ol type="a" id="std" name="std">
+            <li>ahmed</li>
+            <li>abdo</li>
+            <li>lionel</li>
+        </ol>
     </div>
     <hr>
     <hr>
-    <ol type="a">
-        <li>ahmed</li>
-        <li>abdo</li>
-        <li>lionel</li>
-    </ol>
+    <div>
+        <p><b>Courses: </b></p>
+        <ul id="crs" name="crs">
+            <li>Maths</li>
+            <li>Science</li>
+            <li>Geography</li>
+        </ul>
+    </div>
     <hr>
-    <hr>
-    <ul>
-        <li>ahmed</li>
-        <li>abdo</li>
-        <li>lionel</li>
-    </ul>
-    <hr>
-    <hr>
-    <h1>Children <b>Stories</b></h1>
-    <h1>Children <strong>Stories</strong></h1>
-    <h1>Children <i>Stories</i></h1>
-    <h1>Children <em>Stories</em></h1>
-    <h1>Children <mark>Stories</mark></h1>
-    <h1>Children <u>Stories</u></h1>
-    <h1>Children <small><small>Stories</small></small></h1>
-    <h1>Children <del>Stories</del></h1>
-    <h1>2*10<sup>9</sup></h1>
-    <h1>H<sub>2</sub>O</h1>
+    <form action="" method="get" target="_blank">
+        <div>
+            <label for="user">Username</label>
+            <input type="text" required placeholder="Username" value="abdalrahman" title="Enter a valid Username"
+                readonly name="user" id="user" />
+        </div>
+        <hr>
+        <div>
+            <label for="subject">Subject</label>
+            <input type="text" placeholder="Subject" autofocus name="subject" id="subject" />
+        </div>
+        <hr>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" required placeholder="Password" minlength="10" maxlength="20"
+                value="last entered password" name="pass" id="pass">
+        </div>
+        <hr>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" required placeholder="Write A Valid Email" value="Ex: abc@def.ghi" name="mail"
+                id="email" disabled />
+        </div>
+        <hr>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="Color" id="color" />
+        </div>
+        <hr>
+        <div>
+            <label for="range">Range</label>
+            <input type="range" min="0" max="100" step="20" value="80" name="range" id="range" />
+        </div>
+        <hr>
+        <div>
+            <label for="num">Number</label>
+            <input type="number" min="10" max="100" step="10" id="num" name="number" />
+        </div>
+        <hr>
+        <div>
+            <input type="radio" value="Windows" id="win" name="os" checked />
+            <label for="win">Windows</label>
+            <input type="radio" value="Linux" id="lin" name="os" />
+            <label for="lin">Linux</label>
+            <input type="radio" value="Mac" id="mac" name="os" />
+            <label for="mac">Mac</label>
+        </div>
+        <hr>
+        <div>
+            <input type="checkbox" value="Windows" id="win1" name="os" checked />
+            <label for="win1">Windows</label>
+            <br>
+            <input type="checkbox" value="Linux" id="lin1" name="os" />
+            <label for="lin1">Linux</label>
+            <br>
+            <input type="checkbox" value="Mac" id="mac1" name="os" />
+            <label for="mac1">Mac</label>
+        </div>
+        <hr>
+        <label for="book">Choose Book:</label>
+        <select name="book" id="book">
+            <optgroup label="Romantic Books">
+                <option value="1">Book 1</option>
+                <option value="2">Book 2</option>
+                <option value="3">Book 3</option>
+            </optgroup>
+            <optgroup label="Police Books">
+                <option value="4" selected>Book 4</option>
+                <option value="5">Book 5</option>
+                <option value="6">Book 6</option>
+            </optgroup>
+        </select>
+        <hr />
+        <textarea placeholder="Test Text" cols="40" rows="10" name="subject"></textarea>
+        <hr />
+        <div>
+            <label for="upload">Upload</label>
+            <input type="file" id="upload" name="upload" />
+        </div>
+        <hr />
+        <div>
+            <label>Search</label>
+            <input type="search" />
+        </div>
+        <hr />
+        <div>
+            <label>Url</label>
+            <input type="url" />
+        </div>
+        <hr />
+        <div>
+            <label>Date</label>
+            <input type="date" />
+        </div>
+        <hr />
+        <div>
+            <label>Month</label>
+            <input type="month" />
+        </div>
+        <hr />
+        <div>
+            <label>Time</label>
+            <input type="time" />
+        </div>
+        <hr>
+        <label for="prog_lang">programming language: </label>
+        <input list="programming" name="prog_lang" id="prog_lang">
+        <datalist id="programming">
+            <option value="Python">
+            <option value="PHP">
+            <option value="C#">
+            <option value="C">
+            <option value="C++">
+            <option value="Scala">
+        </datalist>
+        <hr />
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Save" />
+    </form>
+    <h2 id="end">end here</h2>
+    <button><a href="#start" title="go to start">go to start</a> </button>
 </body>
 
 </html>
