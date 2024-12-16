@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "try_events", "try_events\try_events.csproj", "{9E960656-A22C-42F7-8ABD-1E0C5D125BD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "try_operation_overriding", "try_operation_overriding\try_operation_overriding.csproj", "{CAF946A7-376B-466A-92D1-AFAFF082FBBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E960656-A22C-42F7-8ABD-1E0C5D125BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E960656-A22C-42F7-8ABD-1E0C5D125BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E960656-A22C-42F7-8ABD-1E0C5D125BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E960656-A22C-42F7-8ABD-1E0C5D125BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF946A7-376B-466A-92D1-AFAFF082FBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF946A7-376B-466A-92D1-AFAFF082FBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF946A7-376B-466A-92D1-AFAFF082FBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF946A7-376B-466A-92D1-AFAFF082FBBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
