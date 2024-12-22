@@ -13,22 +13,22 @@
             
             Console.WriteLine();
 
-            Product m1 = new(15, "Apple");
-            Product m2 = new(10, "Orange");
+            Product p1 = new(15, "Apple");
+            Product p2 = new(10, "Mango");
 
-            Console.WriteLine($"m1 => {m1}");
-            Console.WriteLine($"m2 => {m2}");
+            Console.WriteLine($"p1 => {p1}");
+            Console.WriteLine($"p2 => {p2}");
             Console.WriteLine();
-            Console.WriteLine($"Price of m1 + m2: {+m1} + {+m2} = {m1 + m2}");
-            Console.WriteLine($"Price of m1 - m2: {+m1} - {+m2} = {m1 - m2}");
-            Console.WriteLine($"Price of m1 * m2: {+m1} * {+m2} = {m1 * m2}");
-            Console.WriteLine($"Price of m1 / m2: {+m1} / {+m2} = {m1 / m2}");
-            Console.WriteLine($"Price of m1 > m2: {+m1} > {+m2} = {m1 > m2}");
-            Console.WriteLine($"Price of m1 < m2: {+m1} < {+m2} = {m1 < m2}");
-            Console.WriteLine($"Price of m1 >= m2: {+m1} >= {+m2} = {m1 >= m2}");
-            Console.WriteLine($"Price of m1 <= m2: {+m1} <= {+m2} = {m1 <= m2}");
-            Console.WriteLine($"Price of m1 == m2: {+m1} == {+m2} = {m1 == m2}");
-            Console.WriteLine($"Price of m1 != m2: {+m1} != {+m2} = {m1 != m2}");
+            Console.WriteLine($"p1  + p2: {+p1}  + {+p2} = {p1 + p2}");
+            Console.WriteLine($"p1  - p2: {+p1}  - {+p2} = {p1 - p2}");
+            Console.WriteLine($"p1  * p2: {+p1}  * {+p2} = {p1 * p2}");
+            Console.WriteLine($"p1  / p2: {+p1}  / {+p2} = {p1 / p2}");
+            Console.WriteLine($"p1  > p2: {+p1}  > {+p2} = {p1 > p2}");
+            Console.WriteLine($"p1  < p2: {+p1}  < {+p2} = {p1 < p2}");
+            Console.WriteLine($"p1 >= p2: {+p1} >= {+p2} = {p1 >= p2}");
+            Console.WriteLine($"p1 <= p2: {+p1} <= {+p2} = {p1 <= p2}");
+            Console.WriteLine($"p1 == p2: {+p1} == {+p2} = {p1 == p2}");
+            Console.WriteLine($"p1 != p2: {+p1} != {+p2} = {p1 != p2}");
             Console.WriteLine();
 
             Console.ReadKey();
