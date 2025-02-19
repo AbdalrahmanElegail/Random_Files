@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>fint</Title>
+			<Shortcut>fint</Shortcut>
+			<Description>Code snippet for Fast int input</Description>
+			<Author>Abdelrahman Almowafy</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>int name</ToolTip>
+					<Default>n</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[int $name$ = int.Parse(Console.ReadLine()); 
+				$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>farr</Title>
+			<Shortcut>farr</Shortcut>
+			<Description>Code snippet for Fast array input</Description>
+			<Author>Abdelrahman Almowafy</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>arr</ID>
+					<ToolTip>arr name</ToolTip>
+					<Default>arr</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>arr type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[$type$[] $arr$ = Array.ConvertAll(Console.ReadLine()!.Split(), $type$.Parse); 
+				$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
