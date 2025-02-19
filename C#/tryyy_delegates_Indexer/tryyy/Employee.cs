@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 
 namespace tryyy
 {
 
-    internal class People
+    internal class People : IEnumerable
     {
-        public People[]? PeopleList { get; private set; }
+        private People[]? PeopleList { get; set; }
         public void SetPeopleList(People[] peopleList) { PeopleList = peopleList; }
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -28,5 +29,39 @@ namespace tryyy
             }
         }
         public override string ToString() => $"Id: {Id} | Name: {Name} | Gender: {Gender} | Sales: {Sales} ";
+
+        public IEnumerator GetEnumerator()
+        {
+            return new PeopleEnumerator(PeopleList!);
+        }
+        public class PeopleEnumerator(People[] people) : IEnumerator
+        {
+            private People[] _people = people;
+            private int _index = -1;
+
+            public bool MoveNext()
+            {
+                _index++;
+                return _index < _people.Length;
+            }
+            public void Reset()
+            {
+                _index = -1;
+            }
+            public object Current
+            {
+                get
+                {
+                    try
+                    {
+                        return _people[_index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
+                }
+            }
+        }
     }
 }
