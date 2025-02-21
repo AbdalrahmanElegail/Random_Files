@@ -7,56 +7,64 @@ namespace try_event
     {
         static void Main(string[] args)
         {
-            Stock stock = new("Facebook", 100m, true);
+            Stock stock1 = new("Facebook", 100m);
+            stock1.Subscribe();
+            stock1.ChangePriceBy(0);
+            stock1.ChangePriceBy(-0.01m);
+            stock1.ChangePriceBy(0.01m);
 
-            stock.ChangePriceBy(0.01m);
-            stock.ChangePriceBy(-0.01m);
-            stock.ChangePriceBy(0);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-            Console.WriteLine();
+            Stock stock2 = new("Google", 100m);
+            stock2.ChangePriceBy(0);
+            stock2.ChangePriceBy(-0.01m);
+            stock2.ChangePriceBy(0.01m);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-            stock.Subscribe = false;
-            stock.ChangePriceBy(0.01m);
-            stock.ChangePriceBy(-0.01m);
-            stock.ChangePriceBy(0);
+            stock2.Subscribe();
+            stock2.ChangePriceBy(0);
+            stock2.ChangePriceBy(-0.01m);
+            stock2.ChangePriceBy(0.01m);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+
 
             Console.ReadKey();
         }
     }
 
-    public delegate void PriceChangeHandler(Stock stock, decimal oldPrice);
-    public class Stock
+    //public delegate void PriceChangeHandler(Stock stock, decimal oldPrice, ref string sign);
+    public class Stock(string _Name, decimal _Price)
     {
-        public event PriceChangeHandler PriceChange;
-        public string Name { get; set; } 
-        public decimal Price {  get; set; } 
-        public bool Subscribe { get; set; }
+        public event Func<Stock, decimal, string>? PriceChangeService = null;
 
-        public Stock(string _Name, decimal _Price, bool _Subscribe = false )
-        {
-            Subscribe = _Subscribe;
-            Name = _Name;
-            if (Price < 0) Price = 0;
-            else Price = _Price;
-        }
+        //private event PriceChangeHandler? PriceChangeService2 = null;
+        public string Name { get; set; } = _Name;
+        public decimal Price { get; set; } = _Price < 0 ? 0 : _Price;
+        private bool Subscribed { get; set; } = false;
+        public void Subscribe() => Subscribed = true;
 
-        private void Stock_PriceChange(Stock stock, decimal oldPrice)
+        private string StockPriceChangeService(Stock stock, decimal oldPrice)
         {
-            string sign = "";
+            string? sign;
             if (stock.Price > oldPrice) { Console.ForegroundColor = ConsoleColor.Green; sign = "UP"; }
             else if (stock.Price < oldPrice) { Console.ForegroundColor = ConsoleColor.Red; sign = "DOWN"; }
-            else Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine($"New Price for {stock.Name}: {stock.Price} {sign}");
+            else { Console.ForegroundColor = ConsoleColor.Gray; sign = "CONST"; }
+            return sign;
         }
         public void ChangePriceBy(decimal percent) 
         {
-            PriceChange = null;
+            Console.ForegroundColor = ConsoleColor.Gray;
+            string? sign = "";
             decimal oldPrice = this.Price;
-            this.Price += percent*this.Price;
-            PriceChange += Stock_PriceChange;
-            if (Subscribe) PriceChange(this,oldPrice);
-            else PriceChange(this, this.Price);
-            
+            this.Price += percent * this.Price;
+            this.Price = Math.Round(this.Price,2); 
+            if (Subscribed)
+            {
+                PriceChangeService += StockPriceChangeService;
+                sign = PriceChangeService(this, oldPrice);
+            }
+            Console.WriteLine($"New Price for {this.Name}: {this.Price} {sign}");
         }
     }
 }
