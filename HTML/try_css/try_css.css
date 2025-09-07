@@ -1,0 +1,37 @@
+div p{
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    text-shadow: 3px 3px 3px rgb(28, 18, 146);
+    box-shadow: 3px 3px 3px rgb(11, 118, 108);
+    direction:rtl ;
+    background-color: rgb(68, 149, 167);
+    text-decoration: none;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+div pre{
+     display: inherit;
+    padding: inherit;
+    margin: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+    direction:inherit;
+    background-color:inherit;
+    text-decoration: inherit;
+    text-transform: inherit;
+    text-overflow: inherit;
+    text-align: inherit;
+}
+

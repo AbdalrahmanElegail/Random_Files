@@ -7,7 +7,7 @@ namespace try_reflection
     {
         static void Main(string[] args)
         {
-            Wallet w1 = new Wallet();
+            Wallet w1 = new();
             Console.WriteLine(w1 + "\n");
             Type t1 = typeof(Wallet);
 
@@ -48,7 +48,7 @@ namespace try_reflection
                     continue;
                 }
 
-                methodInfo.Invoke(w1, new object[] { amount });
+                methodInfo.Invoke(w1, [amount]);
                 Console.WriteLine("Updated Wallet:\n" + w1);
                 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
             }
